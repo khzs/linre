@@ -30,4 +30,6 @@ dconf load /org/gnome/shell/extensions/ < resources/gnome-extensions.ini
 
 
 
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
 source linre.sh
