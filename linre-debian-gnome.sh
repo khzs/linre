@@ -18,9 +18,9 @@ sudo apt modernize-sources -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 
-
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close:'
 gsettings set org.gnome.software download-updates-notify false
+gsettings set org.gnome.software allow-updates false
 
 ./resources/gext install    start-overlay-in-application-view@Hex_cz \
                             blur-my-shell@aunetx \
