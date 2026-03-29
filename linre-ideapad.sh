@@ -2,7 +2,7 @@
 
 #
 sudo apt install podman-compose gnome-tweaks -y                # gnome-tweaks : Startup applications
-flatpak install org.qbittorrent.qBittorrent org.jellyfin.JellyfinServer -y
+flatpak install --app qBittorrent JellyfinServer LocalSend -y
 
 # usb portba dugott egerre wakeup meglegyen
 lsusb | grep Xiaomi
