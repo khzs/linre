@@ -7,12 +7,8 @@ sudo mv scootersoftware.list /etc/apt/sources.list.d/
 sudo apt update
 sudo apt install bcompare -y
 
-
-sudo apt install gparted podman-compose doublecmd-qt -y
-
+sudo apt install gparted doublecmd-qt -y
 sudo apt install gdm3 gnome-core gnome-shell-extension-prefs gnome-software-plugin-flatpak -y
-sudo apt install gnome-tweaks -y
-# gnome-tweaks : Startup applications
 
 sudo apt remove firefox-esr -y
 sudo apt autoremove -y
@@ -30,16 +26,6 @@ gsettings set org.gnome.software allow-updates false
 
 dconf load /org/gnome/ < resources/gnome-all.ini
 dconf load /org/gnome/shell/extensions/ < resources/gnome-extensions.ini
-
-
-
-# ezeket lehetne fullra scriptelni, meg nincs kesz
-
-# set up ralt
-sudo apt install keyd -y
-sudo micro /etc/keyd/default.conf
-sudo systemctl enable keyd
-sudo systemctl restart keyd
 
 
 
