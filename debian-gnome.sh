@@ -8,8 +8,7 @@ sudo apt update
 sudo apt install bcompare -y
 
 sudo apt install gparted doublecmd-qt -y
-sudo apt install gdm3 gnome-core gnome-software-plugin-flatpak -y
-sudo apt install gnome-shell-extension-appindicator gnome-shell-extension-prefs -y
+sudo apt install gdm3 gnome-core gnome-shell-extension-prefs gnome-software-plugin-flatpak -y
 
 sudo apt remove firefox-esr -y
 sudo apt autoremove -y
@@ -17,6 +16,11 @@ sudo apt modernize-sources -y
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
+
+./resources/gext install    start-overlay-in-application-view@Hex_cz \
+                            blur-my-shell@aunetx \
+                            just-perfection-desktop@just-perfection \
+                            appindicatorsupport@rgcjonas.gmail.com
 
 dconf load /org/gnome/ < resources/gnome-all.ini
 
