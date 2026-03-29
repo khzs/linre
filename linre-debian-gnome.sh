@@ -28,6 +28,7 @@ gsettings set org.gnome.software download-updates-notify false
                             appindicatorsupport@rgcjonas.gmail.com
 
 dconf load /org/gnome/ < resources/gnome-all.ini
+dconf load /org/gnome/shell/extensions/ < resources/gnome-extensions.ini
 
 
 
