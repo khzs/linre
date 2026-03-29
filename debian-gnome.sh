@@ -14,6 +14,7 @@ dconf load /org/gnome/ < resources/gnome-all.ini
 curl -fsSL https://raw.githubusercontent.com/khzs/keyboard-everything/main/screenshot.ini | dconf load /org/gnome/
 
 gsettings set org.gnome.software download-updates-notify false
+gsettings set org.gnome.software allow-updates false
 
 
 sudo mkdir -p /etc/keyd/
