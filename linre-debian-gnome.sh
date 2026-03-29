@@ -27,6 +27,9 @@ gsettings set org.gnome.software download-updates-notify false
                             just-perfection-desktop@just-perfection \
                             appindicatorsupport@rgcjonas.gmail.com
 
+dconf load /org/gnome/ < resources/gnome-all.ini
+
+
 
 # ezeket lehetne fullra scriptelni, meg nincs kesz
 
