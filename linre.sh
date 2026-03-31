@@ -1,6 +1,6 @@
 #
 
-flatpak install --app com.microsoft.Edge Pinta -y
+flatpak install com.microsoft.Edge com.github.PintaProject.Pinta -y
 
 git clone https://github.com/khzs/dotfiles-core.git ~/.config/dotfiles-core
 source ~/.config/dotfiles-core/one-time-setup-$(uname).sh 

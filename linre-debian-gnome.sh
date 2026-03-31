@@ -15,7 +15,7 @@ sudo apt remove firefox-esr -y
 sudo apt autoremove -y
 sudo apt modernize-sources -y
 
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close:'
