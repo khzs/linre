@@ -14,7 +14,11 @@ sudo apt remove firefox-esr -y
 sudo apt autoremove -y
 sudo apt modernize-sources -y
 
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+if [[ " ${BASH_SOURCE[*]} " == *"entry1.sh"* ]]; then
+    sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+else
+    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+fi
 
 
 ./resources/gext install    start-overlay-in-application-view@Hex_cz \

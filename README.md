@@ -3,9 +3,5 @@
 ## Scripted steps
 
 ```
-sudo apt install git -y
-git clone https://github.com/khzs/linre.git && cd linre
-source ...
-source ...
-sudo reboot
+curl -L https://github.com/khzs/linre/raw/main/anchor1.sh | bash
 ```
