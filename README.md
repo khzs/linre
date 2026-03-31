@@ -3,7 +3,5 @@
 ## Scripted steps
 
 ```
-sudo apt install git -y
-git clone https://github.com/khzs/linre.git
-source linre/...
+curl -L https://github.com/khzs/linre/raw/main/entry1.sh | bash
 ```
