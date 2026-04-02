@@ -1,0 +1,22 @@
+--- /usr/share/grub/default/grub	2026-02-15 14:50:20.000000000 +0100
++++ /etc/default/grub	2026-03-14 19:45:50.822688313 +0100
+@@ -3,8 +3,8 @@
+ # For full documentation of the options in these files, see:
+ #   info -f grub -n 'Simple configuration'
+ 
+-GRUB_DEFAULT=0
+-GRUB_TIMEOUT=5
++GRUB_DEFAULT=1
++GRUB_TIMEOUT=2
+ GRUB_DISTRIBUTOR=`( . /etc/os-release && echo ${NAME} )`
+ GRUB_CMDLINE_LINUX_DEFAULT="quiet"
+ GRUB_CMDLINE_LINUX=""
+@@ -14,7 +14,7 @@
+ # for guest OSes installed via LVM or raw disk devices, running
+ # os-prober can cause damage to those guest OSes as it mounts
+ # filesystems to look for things.
+-GRUB_DISABLE_OS_PROBER=true
++GRUB_DISABLE_OS_PROBER=false
+ 
+ # Uncomment to enable BadRAM filtering, modify to suit your needs
+ # This works with Linux (no patch required) and with any kernel that obtains
