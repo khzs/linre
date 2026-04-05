@@ -16,6 +16,8 @@ for app in "${flatpak_apps_autostart_yes[@]}"; do
   cp -L "/var/lib/flatpak/exports/share/applications/${app}.desktop" ~/.config/autostart/
 done
 
+patch --forward --reject-file=- ~/.config/autostart/org.jellyfin.JellyfinServer.desktop resources/jellyfin.desktop.patch
+
 sudo cp resources/default.conf /etc/keyd/
 sudo systemctl enable keyd
 sudo systemctl restart keyd
