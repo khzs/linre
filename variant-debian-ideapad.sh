@@ -18,6 +18,8 @@ for app in "${flatpak_apps_autostart_yes[@]}"; do
   cp -L "/var/lib/flatpak/exports/share/applications/${app}.desktop" ~/.config/autostart/
 done
 
+patch --forward --reject-file=- ~/.config/autostart/org.jellyfin.JellyfinServer.desktop resources/jellyfin.desktop.patch
+
 # usb portba dugott egerre wakeup meglegyen
 sudo cp resources/90-usb-wakeup.rules /etc/udev/rules.d/
 
