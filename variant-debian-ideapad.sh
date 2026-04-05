@@ -1,9 +1,22 @@
 #
 # this is to be installed after the anchor / basic install completed, run as standalone
 
-sudo apt install podman-compose gnome-tweaks -y                # gnome-tweaks : Startup applications
+sudo apt install podman-compose -y
 brew install yt-dlp
-flatpak install org.localsend.localsend_app org.qbittorrent.qBittorrent org.jellyfin.JellyfinServer -y
+
+flatpak_apps_autostart_yes=(
+  org.localsend.localsend_app
+  org.qbittorrent.qBittorrent
+  org.jellyfin.JellyfinServer
+)
+flatpak_apps_autostart_no=(
+)
+flatpak install -y "${flatpak_apps_autostart_yes[@]}" "${flatpak_apps_autostart_no[@]}"
+
+mkdir -p ~/.config/autostart
+for app in "${flatpak_apps_autostart_yes[@]}"; do
+  cp -L "/var/lib/flatpak/exports/share/applications/${app}.desktop" ~/.config/autostart/
+done
 
 # usb portba dugott egerre wakeup meglegyen
 sudo cp resources/90-usb-wakeup.rules /etc/udev/rules.d/
