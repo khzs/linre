@@ -1,0 +1,9 @@
+#!/bin/sh
+exec tail -n +3 $0
+menuentry "GParted Live" {
+    set isofile="/gparted/gparted.iso"
+    search --no-floppy --fs-uuid --set=root __BOOT_UUID__
+    loopback loop $isofile
+    linux (loop)/live/vmlinuz boot=live config union=overlay username=user components noswap noeject toram=filesystem.squashfs findiso=$isofile
+    initrd (loop)/live/initrd.img
+}
