@@ -28,4 +28,5 @@ sudo cp resources/90-usb-wakeup.rules /etc/udev/rules.d/
 
 sudo mv /etc/grub.d/30_os-prober /etc/grub.d/09_os-prober
 sudo patch --forward --reject-file=- /etc/default/grub resources/grub.patch
+source gparted-grub-install.sh
 sudo update-grub
