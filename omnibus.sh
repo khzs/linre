@@ -4,6 +4,9 @@ flatpak install com.microsoft.Edge com.github.PintaProject.Pinta -y
 
 # MS Edge "Save as" fix
 # https://blog.rdiez.es/p/solucionar-el-cierre-de-microsoft-edge-en-linux-wayland-al-descargar-archivos/
+cp /var/lib/flatpak/exports/share/applications/com.microsoft.Edge.desktop ~/.local/share/applications/
+patch --forward --reject-file=- ~/.local/share/applications/com.microsoft.Edge.desktop resources/edge.desktop.patch
+update-desktop-database ~/.local/share/applications
 
 
 git clone https://github.com/khzs/dotfiles-core.git ~/.config/dotfiles-core
