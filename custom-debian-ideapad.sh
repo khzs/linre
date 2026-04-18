@@ -18,6 +18,7 @@ for app in "${flatpak_apps_autostart_yes[@]}"; do
 done
 
 patch --forward --reject-file=- ~/.config/autostart/org.jellyfin.JellyfinServer.desktop resources/jellyfin.desktop.patch
+patch --forward --reject-file=- ~/.config/autostart/org.localsend.localsend_app.desktop resources/localsend_autostart_minimized.patch
 
 sudo cp resources/default.conf /etc/keyd/
 sudo systemctl enable keyd
