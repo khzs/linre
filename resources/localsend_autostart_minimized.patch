@@ -1,0 +1,10 @@
+--- /var/lib/flatpak/exports/share/applications/org.localsend.localsend_app.desktop	2026-03-18 21:22:42.686132447 +0100
++++ /home/zs/.config/autostart/org.localsend.localsend_app.desktop	2026-04-18 20:56:52.393131067 +0200
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Name=LocalSend
+-Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=localsend --file-forwarding org.localsend.localsend_app @@u %U @@
++Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=localsend --file-forwarding org.localsend.localsend_app --hidden @@u %U @@
+ Icon=org.localsend.localsend_app
+ Type=Application
+ Terminal=false
