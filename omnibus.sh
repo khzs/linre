@@ -1,6 +1,6 @@
 #
 
-flatpak install com.microsoft.Edge com.github.PintaProject.Pinta -y
+flatpak install com.microsoft.Edge com.github.PintaProject.Pinta it.mijorus.smile -y
 
 # MS Edge "Save as" fix
 # https://blog.rdiez.es/p/solucionar-el-cierre-de-microsoft-edge-en-linux-wayland-al-descargar-archivos/
