@@ -19,6 +19,7 @@ done
 
 patch --forward --reject-file=- ~/.config/autostart/org.jellyfin.JellyfinServer.desktop resources/jellyfin.desktop.patch
 patch --forward --reject-file=- ~/.config/autostart/org.localsend.localsend_app.desktop resources/localsend_autostart_minimized.patch
+patch --forward --reject-file=- ~/.config/autostart/org.qbittorrent.qBittorrent.desktop resources/qbittorrent_delay.patch
 
 sudo cp resources/default.conf /etc/keyd/
 sudo systemctl enable keyd
