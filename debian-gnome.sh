@@ -8,6 +8,7 @@ sudo apt remove firefox-esr -y
 ./resources/gext install    start-overlay-in-application-view@Hex_cz \
                             blur-my-shell@aunetx \
                             just-perfection-desktop@just-perfection \
+                            smile-extension@mijorus.it \
                             appindicatorsupport@rgcjonas.gmail.com
 
 dconf load /org/gnome/ < resources/gnome-all.ini
