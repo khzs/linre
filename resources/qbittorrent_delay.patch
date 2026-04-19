@@ -1,0 +1,10 @@
+--- /var/lib/flatpak/exports/share/applications/org.qbittorrent.qBittorrent.desktop	2026-02-27 15:37:37.590360067 +0100
++++ /home/zs/.config/autostart/org.qbittorrent.qBittorrent.desktop	2026-04-19 13:06:49.669829506 +0200
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Categories=Network;FileTransfer;P2P;Qt;
+-Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=qbittorrent --file-forwarding org.qbittorrent.qBittorrent @@u %U @@
++Exec=sh -c "sleep 1 && /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=qbittorrent --file-forwarding org.qbittorrent.qBittorrent @@u %U @@"
+ GenericName=BitTorrent client
+ Comment=Download and share files over BitTorrent
+ Icon=org.qbittorrent.qBittorrent
