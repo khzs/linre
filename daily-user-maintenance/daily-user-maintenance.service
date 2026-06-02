@@ -8,9 +8,9 @@ Wants=network-online.target
 Type=oneshot
 ExecStart=/usr/bin/zsh -lic "pi update --extensions \
 \
-&& brew upgrade -y \
+&& HOMEBREW_NO_CLEANUP_FORMULAE=pi-coding-agent brew upgrade -y \
 && brew autoremove \
-&& brew cleanup --prune=all \
+&& HOMEBREW_NO_CLEANUP_FORMULAE=pi-coding-agent brew cleanup --prune=all \
 \
 && flatpak upgrade -y \
 && flatpak uninstall --unused -y \

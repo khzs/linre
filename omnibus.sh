@@ -1,13 +1,13 @@
 #
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install com.microsoft.Edge com.github.PintaProject.Pinta it.mijorus.smile -y
+flatpak install com.github.PintaProject.Pinta it.mijorus.smile -y
 
 # MS Edge "Save as" fix
 # https://blog.rdiez.es/p/solucionar-el-cierre-de-microsoft-edge-en-linux-wayland-al-descargar-archivos/
 mkdir -p ~/.local/share/applications/
-cp /var/lib/flatpak/exports/share/applications/com.microsoft.Edge.desktop ~/.local/share/applications/
-patch --forward --reject-file=- ~/.local/share/applications/com.microsoft.Edge.desktop resources/edge.desktop.patch
+cp /usr/share/applications/microsoft-edge.desktop ~/.local/share/applications/microsoft-edge.desktop
+patch --forward --reject-file=- ~/.local/share/applications/microsoft-edge.desktop resources/edge.desktop.patch
 
 ./daily-user-maintenance/install.sh
 

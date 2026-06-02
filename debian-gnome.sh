@@ -1,13 +1,15 @@
 #
 
+sudo add-apt-repository ppa:keyd-team/ppa
+sudo apt update
+
 sudo apt install flatpak gparted keyd doublecmd-qt gnome-shell-extension-prefs -y
-sudo apt install gdm3 gnome-core -y
-sudo apt remove firefox-esr gnome-software -y
+sudo apt install git-lfs make ripgrep fd-find -y    # for pi-coding-agent cursor plugin
+sudo snap remove firefox
 
 
 ./resources/gext install    just-perfection-desktop@just-perfection \
                             blur-my-shell@aunetx \
-                            appindicatorsupport@rgcjonas.gmail.com \
                             smile-extension@mijorus.it \
                             start-overlay-in-application-view@Hex_cz
 
