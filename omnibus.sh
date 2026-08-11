@@ -9,6 +9,8 @@ mkdir -p ~/.local/share/applications/
 cp /var/lib/flatpak/exports/share/applications/com.microsoft.Edge.desktop ~/.local/share/applications/
 patch --forward --reject-file=- ~/.local/share/applications/com.microsoft.Edge.desktop resources/edge.desktop.patch
 
+./daily-user-maintenance/install.sh
+
 
 git clone https://github.com/khzs/dotfiles-core.git ~/.config/dotfiles-core
 source ~/.config/dotfiles-core/one-time-setup-$(uname).sh
